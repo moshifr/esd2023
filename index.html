@@ -24,6 +24,8 @@
         header {
             /** permet d'utiliser flexbox **/
             display: flex;
+            margin-top: 30px;
+            margin-bottom: 30px;
 
             /** aligne horizontalement à gauche **/
             justify-content: start;
@@ -36,7 +38,27 @@
         #btn-fixed {
             /** espacer à gauche la totalité pour le ferrer sur la droite **/
             margin-left: auto;
+            padding: 15px 40px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            /* identical to box height */
+
+            text-decoration: none;
+            color: #2D76F9;
+            border: 1.5px solid #2D76F9;
+            border-radius: 50px;
+            transition: 0.2s ;
+
         }
+
+        #btn-fixed:hover {
+            background: #2D76F9;
+            color: white;
+        }
+
         nav ul li {
             display: inline-block;
             margin-left: 25px;
@@ -64,10 +86,81 @@
             color: #2D76F9;
             text-decoration: none;
         }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .flex > div {
+            flex-grow: 1 ;
+            flex-basis: 50%;
+        }
+
+        h1 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 85px;
+            /* or 133% */
+
+
+            color: #212121;
+            margin-bottom: 30px;
+        }
+
+        p {
+
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 36px;
+            /* or 200% */
+
+
+            color: #747474;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .btn {
+
+            font-style: normal;
+            color: #FFF;
+            text-decoration: none;
+            background: #2D76F9;
+            padding: 15px 30px;
+            display: inline-block;
+            /**
+            Border radius permet d'arrondir les bords ici on a mis 50px mais on peut utiliser
+            un pourcentage par exemple à 100% pour en faire un rond parfait
+             */
+            border-radius: 50px;
+            margin-top: 30px;
+            /**
+            transition permet de faire une animation d'un état numérique ou couleur A vers un état B
+            avec le délai ici 0.2secondes
+             */
+            transition: 0.2s ease;
+            border: 1px solid #2D76F9;
+        }
+
+        /**
+        :hover permet le sélecteur lors d'un survol de la souris sur cet élément
+        ça permet de surcharger les valeurs en fonction de l'état du curseur
+        **/
+        .btn:hover {
+            background: white;
+            color: #2D76F9;
+        }
     </style>
 </head>
 <body>
-    <div id="wrapper" style="background: yellow">
+    <div id="wrapper">
         <header>
             <div class="logo">
                 <img src="assets/logo.png" alt="Remind.me">
@@ -83,12 +176,18 @@
             <a href="" id="btn-fixed">About app</a>
         </header>
 
-        <div style="background: violet">
-            <div style="background: gray">gray</div>
-            <div style="background: black">black</div>
-
-
-            <span style="background: green">otieoiteoieoioerioe</span>
+        <div class="flex">
+            <div>
+                <h1>Manage Schedule and Task Easy </h1>
+                <p>Create and organize schedule and task deadline become better, easy manage and certainly no longer lagging behind schedule of activities and task
+                </p>
+                <p>
+                    <a href="" class="btn">Download App</a>
+                </p>
+            </div>
+            <div style="">
+                <img src="assets/hero.png" alt="Présentation application remind.me">
+            </div>
         </div>
     </div>
 
