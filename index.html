@@ -157,6 +157,59 @@
             background: white;
             color: #2D76F9;
         }
+
+
+        #presentation {
+            padding-top: 90px;
+            padding-bottom: 90px;
+
+            /** 2ème solution : idéale dans notre exemple, utilisation de flexbox **/
+            display: flex;
+            /** gap permet l'espace des éléments, gouttière) **/
+            gap: 20px;
+
+            /*** 3ème solution dans le cas d'une grille ou d'un tableau où les cellules sont égales en largeur / hauteur
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+
+             */
+        }
+
+        #presentation > div {
+            /**
+            1ère façon d'aligner les blocs : solution pas idéale on a pas la main sur la largeur
+            width: 32%;
+            margin: 5px;
+            float: left;
+            **/
+        }
+
+        .icone {
+            background: #EEF4FF;
+            display: inline-block;
+            padding: 22px;
+            border-radius: 100%;
+            transition: 0.5s;
+            margin-bottom: 50px;
+        }
+
+        .icone:hover {
+            background: #B9D1FC;
+        }
+
+        #presentation h3 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 36px;
+            /* identical to box height */
+
+
+            color: #212121;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -189,6 +242,42 @@
                 <img src="assets/hero.png" alt="Présentation application remind.me">
             </div>
         </div>
+
+        <section id="presentation">
+            <div>
+                <div class="icone">
+                    <img src="assets/ico-deadline.png" alt="Calendrier">
+                </div>
+                <h3>
+                    Set a better deadline tasks
+                </h3>
+                <p>
+                    You can make your duty deadlines better and more orderly
+                </p>
+            </div>
+            <div>
+                <div class="icone">
+                    <img src="assets/ico-task.png" alt="Calendrier">
+                </div>
+                <h3>
+                    Set a better deadline tasks
+                </h3>
+                <p>
+                    You can make your duty deadlines better and more orderly
+                </p>
+            </div>
+            <div>
+                <div class="icone">
+                    <img src="assets/ico-notification.png" alt="Calendrier">
+                </div>
+                <h3>
+                    Set a better deadline tasks
+                </h3>
+                <p>
+                    You can make your duty deadlines better and more orderly
+                </p>
+            </div>
+        </section>
     </div>
 
 </body>
