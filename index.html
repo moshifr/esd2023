@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
         }
-        #wrapper {
+        .wrapper {
             max-width: 1440px;
             margin-left: auto;
             margin-right: auto;
@@ -232,10 +232,70 @@
         #task-schedule, #notifications {
             margin-bottom: 150px;
         }
+
+        #task-schedule img, #notifications img {
+            width: 100%;
+        }
+
+        #download {
+            background-image: url(assets/background-banner.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; /** il y a plusieurs propriétés : cover, contain, 100% 100%, 100px etc **/
+
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            margin-bottom: 150px;
+        }
+
+        #download h2 {
+            color: white;
+            margin-bottom: 95px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #download .btn {
+            border-color: white;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .btn-white {
+            background-color: white;
+            color: #2D76F9
+        }
+
+        #think .personna img {
+            /** on positionne l'image à gauche **/
+            float: left;
+            margin-right: 25px;
+        }
+        #think .personna > div:last-child {
+            margin-top: 12px
+        }
+
+        #think .personna {
+            /** ici l'overflow hidden permet de cacher les éléments hors width et height, mais permet surtout de debug le float: left de l'image **/
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        #think .arrows {
+            margin-top: 50px;
+        }
+
+        /*** j'ai oublié d'espacer certains éléments sur la droite, je rajoute donc une classe qui permet de le gérer **/
+        .padding-left-second {
+            padding-left: 80px;
+        }
     </style>
 </head>
 <body>
-    <div id="wrapper">
+    <div class="wrapper">
         <header>
             <div class="logo">
                 <img src="assets/logo.png" alt="Remind.me">
@@ -306,7 +366,7 @@
         <div style="">
             <img src="assets/image-task-schedule.png" alt="Screenshot de remind.me">
         </div>
-        <div class="padding-inside">
+        <div class="padding-inside padding-left-second">
             <h2>Set up task and schedule with a best features</h2>
             <p>
                 The best feature makes you better, with the latest technology to meet your needs. Of course, with such features as organizing schedules and leading assignments, it will make you easier, So get the application now !
@@ -327,6 +387,44 @@
             <img src="assets/image-notification.png" alt="Screenshot de remind.me">
         </div>
     </section>
+
+    <div class="wrapper">
+        <section id="download">
+            <h2>Download an app now and the various benefits you will get immediately</h2>
+            <p>
+                <a href="" class="btn btn-white">Download App</a>
+                <a href="" class="btn">About App</a>
+            </p>
+        </section>
+    </div>
+
+
+    <section id="think" class="flex ">
+        <div style="">
+            <img src="assets/image-teams.png" alt="Schéma de l'équipe">
+        </div>
+        <div class="padding-inside padding-left-second">
+            <h2>What do they think</h2>
+            <div class="personna">
+                <div>
+                    <img src="assets/personna-1.png" alt="Samantha Sench">
+                </div>
+                <div>
+                    <h3>Samantha Sench</h3>
+                    <p>Student at University</p>
+                </div>
+            </div>
+            <p>
+                “ Hi, it’s Samantha. After using it made me a lot of benefits, starting with convenience of setting a deadline of tasks and schedule after that the app is very simple using. “
+            </p>
+
+            <p class="arrows">
+                <a href=""><img src="assets/ico-arrow-left.png" alt="Précédent"></a>
+                <a href=""><img src="assets/ico-arrow-right.png" alt="Suivant"></a>
+            </p>
+        </div>
+    </section>
+
 
 </body>
 </html>
