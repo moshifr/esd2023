@@ -6,11 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landing page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
         * {
             margin: 0;
             padding: 0;
+        }
+        body {
+            padding-top: 80px;
         }
         .wrapper {
             max-width: 1440px;
@@ -24,8 +28,8 @@
         header {
             /** permet d'utiliser flexbox **/
             display: flex;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
 
             /** aligne horizontalement à gauche **/
             justify-content: start;
@@ -33,6 +37,24 @@
             align-items: center;
             /* gouttière de 20px entre chaque éléments de header **/
             gap: 20px;
+
+
+
+            /** positionnement toujours en haut de la page **/
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: white;
+            z-index: 3;
+            padding-left: 60px;
+            padding-right: 60px;
+            /** par défaut le calcul de la largeur se fait par le content-box soit largeur hors padding
+            ici on veut que la largeur soit largeur d ucontenu + padding on va utiliser border-box
+            **/
+            box-sizing: border-box;
+            /** ombre portée en bas **/
+            box-shadow: 0 0 42px 0px rgb(0 0 0 / 20%);
         }
 
         #btn-fixed {
@@ -198,7 +220,7 @@
             background: #B9D1FC;
         }
 
-        #presentation h3 {
+         h3 {
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
@@ -293,9 +315,13 @@
             padding-left: 80px;
         }
 
+        footer {
+            margin-bottom: 50px;
+            margin-top: 150px;
+        }
         footer .wrapper {
             display: flex;
-            gap: 30px;
+            gap: 60px;
         }
         footer .wrapper div {
             flex: 1;
@@ -305,6 +331,71 @@
             flex-basis: 17%;
         }
 
+        footer h3 {
+            margin-top: 35px;
+            margin-bottom: 45px;
+        }
+
+        footer ul {
+            padding-left: 15px;
+        }
+        footer li {
+            color: #2D76F9;
+        }
+
+        footer li a {
+
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 36px;
+            /* or 200% */
+            text-decoration: none;
+
+
+            color: #747474;
+        }
+        footer li a:hover {
+            text-decoration: underline;
+        }
+
+        .socials a {
+            color: #2D76F9;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 22px;
+            opacity: 0.4;
+            transition: 0.5s ease;
+        }
+
+        .socials a:hover {
+            opacity:  1;
+        }
+        /** debord bleu de la 1ere image **/
+        #debord-bleu {
+            position: relative;
+        }
+        #debord-bleu img {
+            position: relative;
+            z-index: 2;
+        }
+        /** ajout d'un élément graphique sans ajout de code HTML,
+        n'apparaitra pas lors d'une cherche ou dans le code HTML, il est important que ce contenu soit
+        optionnel ou purement design
+         */
+        #debord-bleu:before {
+            /** content permet de rajouter du contenu texte via la CSS **/
+            content: '';
+            background: #EEF4FF;
+            height: 120%;
+            width: 110%;
+            display: block;
+            position: absolute;
+            top: -125px;
+            left: 0;
+            z-index: 1;
+        }
     </style>
     <!-- Une façon de faire le pied de page
     <style>
@@ -357,7 +448,7 @@
                     <a href="" class="btn">Download App</a>
                 </p>
             </div>
-            <div style="">
+            <div style="" id="debord-bleu">
                 <img src="assets/hero.png" alt="Présentation application remind.me">
             </div>
         </div>
@@ -491,7 +582,17 @@
             <div>
                 <h3>Follow Us</h3>
 
-                <p>icones</p>
+                <p class="socials">
+                    <a href="">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
