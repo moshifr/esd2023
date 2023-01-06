@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
+
+
         * {
             margin: 0;
             padding: 0;
         }
         body {
+            background: white;
             padding-top: 80px;
         }
         .wrapper {
@@ -396,6 +399,25 @@
             left: 0;
             z-index: 1;
         }
+
+        #hamburger-menu {
+            display: none;
+        }
+
+        @media (max-width: 475px) {
+
+            #hamburger-menu {
+                display: block;
+                margin-left: auto;
+            }
+
+            header nav,
+            #btn-fixed
+            {
+                display: none;
+            }
+        }
+
     </style>
     <!-- Une façon de faire le pied de page
     <style>
@@ -437,6 +459,7 @@
             </nav>
 
             <a href="" id="btn-fixed">About app</a>
+            <a href="" id="hamburger-menu"><img src="assets/hamburger.png" alt="Menu Hamburger"></a>
         </header>
 
         <div class="flex">
