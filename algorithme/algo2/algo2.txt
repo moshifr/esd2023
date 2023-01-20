@@ -1,0 +1,32 @@
+Algorithme DonneTenue
+Variables
+jourActuel: Caractères
+heureActuel: Entier
+tenue: Caractères
+
+Début
+    Saisir jourActuel
+    Saisir heureActuel
+
+    SI jourActuel est 'Dimanche'
+    ALORS tenue devient 'pyjama'
+
+#   SINON SI jourActuel est 'Samedi' ET heure < 20
+#   ALORS tenue = "jogging"
+#   SINON SI jourActuel est 'Samedi' ET heure >= 20
+#   ALORS tenue = 'tenue de soirée'
+
+    SINON SI jourActuel est 'Samedi'
+    ALORS
+        SI heure < 20
+        ALORS tenue = "jogging"
+        SINON
+        ALORS tenue = 'tenue de soirée'
+        FIN SI
+    SINON SI heure > 20 OU heure < 7
+    ALORS tenue = 'pyjama'
+    SINON
+    ALORS tenue = "Tenue d'école"
+    FIN SI
+    Ecrire tenue
+Fin
