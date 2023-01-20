@@ -1,0 +1,14 @@
+Algorithme AfficheNombreSuivant
+Variables
+nombreDepart: entier;
+nombreIncrement: entier;
+
+Début
+    Saisir nombreDeDepart
+    nombreIncrement devient 0
+
+    TantQue nombreIncrement < 10
+        nombreIncrement devient nombreIncrement + 1
+        affiche nombreDeDepart + nombreIncrement
+    FinTantQue
+Fin
