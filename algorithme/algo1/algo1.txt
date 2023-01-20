@@ -1,0 +1,14 @@
+Algorithme AfficheAge
+Variables
+anneeActuelle: Entier
+ageActuel: Entier
+ageTotal: Entier
+
+Début
+    Saisir anneeActuelle
+    Saisir ageActuel
+
+    ageTotal devient 2100 - anneeActuelle + ageActuel
+
+    Ecrire ageTotal
+Fin
