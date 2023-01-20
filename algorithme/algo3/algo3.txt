@@ -1,0 +1,20 @@
+Algorithme AfficheTarif
+Variables
+age: Entier
+montant: Entier
+
+Début
+    montant devient 15
+    Saisir age
+
+    SI age >= 18
+    ALORS montant devient 25
+    SINON SI age < 3
+    ALORS montant devient 0
+
+    SI montant égal à 0
+    ALORS
+        Affiche "Gratuit"
+    SINON
+        Affiche montant
+Fin
