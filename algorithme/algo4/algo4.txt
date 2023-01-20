@@ -1,0 +1,19 @@
+Algorithme CalculMoyenne
+Variables
+notes: Tableau
+moyenne: entier;
+nombreDeNotes: entier;
+
+Début
+    Saisir notes
+    nombreDeNotes devient 0
+    moyenne devient 0
+
+    PourChaque note dans notes
+        nombreDeNotes devient nombreDeNotes + 1
+        moyenne devient moyenne + note
+    FinPourChaque
+
+    moyenne devient moyenne / nombreDeNotes
+    Affiche moyenne
+Fin
