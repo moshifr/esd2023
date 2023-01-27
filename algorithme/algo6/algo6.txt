@@ -1,0 +1,18 @@
+Algorithme CalculSommeEntier
+Variables
+nombreDepart: entier;
+nombreIncrement: entier;
+somme: entier;
+
+Début
+    Saisir nombreDeDepart
+    nombreIncrement devient nombreDeDepart
+    somme devient 0
+
+    TantQue nombreIncrement > 0
+        somme = somme + nombreIncrement
+        nombreIncrement = nombreIncrement - 1
+    FinTantQue
+
+    Affiche somme
+Fin
